@@ -1,0 +1,98 @@
+\chapter{Results}\label{ch:results}
+%**********************************************
+\section{Current sensor} \label{sec:current_sense_results}
+%**********************************************
+
+\subsection{Simulation}
+
+Figure \ref{fig:cursen_sim_res} shows the simulation results for the circuit shown in Figure: \ref{fig:cursen_sim_cir}. The requirement for a \SI{10}{\milli\volt} signal at \SI{1}{\kilo\hertz} to result in less than \SI{250}{\milli\volt} at the output, is shown to be met in \ref{subfig:cursen_sim_noise} where the \SI{10}{\milli\volt} signal at \SI{1}{\kilo\hertz} results in an output of $\approx$\SI{160}{\milli\volt}. Figure \ref{subfig:cursen_sim_step} shows that the circuit has a response time less than 100ms, with a response time of $\approx$\SI{30}{\milli\second}. The requirement that the amplification circuit draws less than \SI{150}{\micro\ampere} is met in Figure: \ref{subfig:cursen_sim_curdraw} where the maximum current draw is \SI{83}{\micro\ampere}.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\linewidth]{./Figures/CurSens_NoiseResp.png}
+\caption{Noise input vs output of current sensing circuit.}
+\label{subfig:cursen_sim_noise}	
+\end{subfigure}
+\hfill
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\linewidth]{./Figures/CurSens_StepResp.png}
+\caption{Step response of current sensing circuit.} 			
+\label{subfig:cursen_sim_step}	
+\end{subfigure}
+\vspace{2pt}
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\linewidth]{./Figures/CurSens_CurDraw.png}
+\caption{Current draw of 5V supply to current sensing circuit.}
+\label{subfig:cursen_sim_curdraw}	
+\end{subfigure}
+\caption{Current sensing circuit simulation results}
+\label{fig:cursen_sim_res}
+\end{figure}
+
+\newpage
+
+\subsection{Practical}
+As shown in Figure:\ref{fig:cursen_prac_resp} the practical results match the simulated results shown in Figure: \ref{fig:cursen_sim_res}. 
+
+The practical response to no input (\ref{subfig:cursen_prac_noin}) shows an output of \SI{66}{\milli\volt}, this differs from the simulation output of \SI{0}{\volt} due to the non ideal nature of practical op amps and is due to the offset voltage between the input terminals.
+
+Figure: \ref{subfig:cursen_sim_step} shows an output voltage of \SI{2.2}{\volt} to a \SI{200}{\milli\ampere} input while Figure: \ref{subfig:cursen_prac_slight} shows a \SI{1.82}{\volt} output to a  \SI{200}{\milli\ampere} input. This is due to the practical circuit having a reduced gain in comparison to the simulation. This was done to reduce the affect of the input offset voltage mentioned previously. 
+
+Figure: \ref{subfig:cursen_prac_stall} shows the output clips sat \SI{3.28}{\volt} which is very close to the theoretical \SI{3.3}{\volt}. 
+
+Figure: \ref{subfig:cursen_prac_noise} shows a lesser response to noise than the simulation, this is due to the noise input to the practical circuit is different to the simulated noise and at a higher frequency so the low pass filter attenuates it more heavily.
+
+The measure response time in Figure: \ref{subfig:cursen_prac_step} is \SI{24}{\milli\second} which is very close to the response time measured in the simulation of \SI{30}{\milli\second}.
+
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[]{0.3\textwidth}
+\includegraphics[width=\linewidth]{./Figures/CurSens_Prac_0input.jpeg}
+\caption{Circuit response to no input.}
+\label{subfig:cursen_prac_noin}	
+\end{subfigure}
+\hfill
+\begin{subfigure}[]{0.3\textwidth}
+\includegraphics[width=\linewidth]{./Figures/CurSens_Prac_Free.jpeg}
+\caption{Circuit response to free running motor.} 			
+\label{subfig:cursen_prac_free}	
+\end{subfigure}
+\hfill
+\begin{subfigure}[]{0.3\textwidth}
+\includegraphics[width=\linewidth]{./Figures/CurSens_Prac_Slight.jpeg}
+\caption{Circuit response to slight restriction on the motor.}
+\label{subfig:cursen_prac_slight}	
+\end{subfigure}
+\vfill
+\begin{subfigure}[]{0.3\textwidth}
+\includegraphics[width=\linewidth]{./Figures/CurSens_Prac_Stall.jpeg}
+\caption{Circuit response to motor stall.}
+\label{subfig:cursen_prac_stall}	
+\end{subfigure}
+\hfill
+\begin{subfigure}[]{0.3\textwidth}
+\includegraphics[width=\linewidth]{./Figures/CurSens_Prac_Noise.jpeg}
+\caption{Circuit response to noise.}
+\label{subfig:cursen_prac_noise}	
+\end{subfigure}
+\hfill
+\begin{subfigure}[]{0.3\textwidth}
+\includegraphics[width=\linewidth]{./Figures/CurSens_Prac_Step.jpeg}
+\caption{Circuit response to step input.} 			
+\label{subfig:cursen_prac_step}	
+\end{subfigure}
+\caption{Circuit response to different input conditions}
+\label{fig:cursen_prac_resp}
+\end{figure}
+
+\newpage
+
+\subsection{Circuit}
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.9\textwidth]{./Figures/Cursens_Cir_Card.jpeg}
+\caption{Labelled circuit and student card.}
+\label{fig:cursen_cir_card}
+\end{figure}

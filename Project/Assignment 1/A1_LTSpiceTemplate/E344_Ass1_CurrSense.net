@@ -6,10 +6,10 @@ I1 N004 R_sense_V PWL file=PWL.csv AC 0
 V1 N004 0 SINE(0m 10m 1000) AC 1
 R1 V_current 0 100k
 XU2 N003 N002 5V 0 V_current LTC6078
-R1-1 N003 R_sense_V 1k tol=5
-R1-2 N002 0 1k tol=5
-R2-1 V_current N002 220k tol=5
-R2-2 0 N003 220k tol=5
+R1-1 N003 R_sense_V 1000 tol=5
+R1-2 0 N002 1000 tol=5
+R2-1 V_current N002 270k tol=5
+R2-2 N003 0 270k tol=5
 C1 V_current N002 48n
 C2 N003 0 48n
 .tran 0 {transtop} 0
