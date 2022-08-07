@@ -21,6 +21,13 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{Design_SonicSens_Filter}
+\BIBentryALTinterwordspacing
+{David M. Alter}, ``Using pwm output as a digital-to-analog converter on a
+  tms320c240 dsp,'' 1998. [Online]. Available:
+  \url{https://www.ti.com/lit/an/spra490/spra490.pdf}
+\BIBentrySTDinterwordspacing
+
 \bibitem{NonIdeal_Opamps}
 \BIBentryALTinterwordspacing
 {R Nave}, ``Departures from ideal op-amp.'' [Online]. Available:
@@ -58,6 +65,12 @@
 \BIBentryALTinterwordspacing
 {Preeti Jain}, ``Current sensors.'' [Online]. Available:
   \url{https://www.engineersgarage.com/current-sensors/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Design_SonicSens}
+\BIBentryALTinterwordspacing
+{Elec Freaks}, ``Ultrasonic ranging module hc-sr04.'' [Online]. Available:
+  \url{https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

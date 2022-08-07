@@ -1,7 +1,5 @@
 \chapter{Literature survey}\label{chap:Lit}
 
-This chapter will cover a review on the different methods for current sensing and the limitations, considerations and configurations for operational amplifier design for current sensing. 
-
 \section{Operational amplifiers}\label{sec:opamps}
 
 \subsubsection{Operational amplifiers: limitations and considerations}\label{sec:opamps_limits}
@@ -27,20 +25,22 @@ The differential amplifier is similar to the inverting amplifier, but instead of
 \begin{subfigure}[]{0.45\textwidth}
 \includegraphics[width=\linewidth]{./Figures/Follower.png}
 \caption{Circuit diagram for a voltage follower\cite{Fund_Opamps}}
-\label{subfig:linear_circuit_diagram}	
+\label{subfig:opamp_foll}	
 \end{subfigure}
 \begin{subfigure}[]{0.45\textwidth}
 \includegraphics[width=\linewidth]{./Figures/Inverting.png}
-\caption{Circuit diagram for a inverting op amp \cite{Fund_Opamps}.} 			\label{subfig:switchmode_circuit_diagram}	
+\caption{Circuit diagram for a inverting op amp \cite{Fund_Opamps}.} 			
+\label{subfig:opamp_invert}	
 \end{subfigure}
 \begin{subfigure}[]{0.45\textwidth}
 \includegraphics[width=\linewidth]{./Figures/NonInverting.png}
 \caption{Circuit diagram for a non-inverting op amp \cite{Fund_Opamps}}
-\label{subfig:linear_circuit_diagram}	
+\label{subfig:opamp_noninvert}	
 \end{subfigure}
 \begin{subfigure}[]{0.45\textwidth}
 \includegraphics[width=\linewidth]{./Figures/Differential.png}
-\caption{Circuit diagram for a differential op amp \cite{Fund_Opamps}} 			\label{subfig:switchmode_circuit_diagram}	
+\caption{Circuit diagram for a differential op amp \cite{Fund_Opamps}} 			
+\label{subfig:opamp_dif}	
 \end{subfigure}
 \caption {Circuit diagrams of 4 op amp configurations}.
 \label{fig:circuit_diagram}
@@ -60,3 +60,15 @@ The Rogowski coil is a non invasive current sensing method that uses a helical s
 The shunt resistor is the most common current sensing technique and uses a resistor in series with the current to be measured. This is a invasive current measuring method. The shunt resistor produces a voltage drop proportional to the current, however the resistance and hence the voltage must be kept low in order to reduce the power consumption. This requires a high gain amplifier circuit to increase the small voltages to meaningful levels. The shunt resistor is a very cost effective solution that works on both AC and DC however it creates a decrease in system efficiency and can't handle high currents due to power dissipation across the resistor. Thermal drift also results in error \cite{CircuitDigest}. 
 
 High-side vs low-side current sensing is only applicable for invasive methods like the shunt resistor. Low-side has the advantages of being simple and low cost and low input common mode voltage however it can't detect high current due to a short \cite{EG_CurSens}. High-side current sensing removes the ground disturbance and can detect accidental shorts however it has a higher complexity and cost because the gain circuit must be able to handle high common mode voltages\cite{EG_CurSens}.  
+
+\clearpage
+\section{Ultrasonic range sensor}
+\subsection{Interfacing with the ultrasonic range sensor}
+The datasheet fo the HC-SR04 shows a \SI{5}{\volt} supply is required and the sensor uses \SI{15}{\milli\ampere} when operating \cite{Design_SonicSens}. Which results in an operating power usage of \SI{75}{\milli\watt}.
+Voltage and time aspects of the trigger
+Voltage and time aspects of the echo and how it relates to distance
+
+\subsection{Converting PWM signals to analogue signals}
+duty cycle
+frequency
+filter specification

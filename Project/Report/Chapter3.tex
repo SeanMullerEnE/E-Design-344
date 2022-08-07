@@ -96,3 +96,25 @@ The measure response time in Figure: \ref{subfig:cursen_prac_step} is \SI{24}{\m
 \caption{Labelled circuit and student card.}
 \label{fig:cursen_cir_card}
 \end{figure}
+
+\clearpage
+\section{Ultrasonic range sensor}
+\subsection{Simulation}
+
+Figure: \ref{fig:sonicsen_sim_step} shows the circuit response to a step input change from the maximum 10\% duty cycle to a 0.5\% duty cycle. As shown in the figure the circuit outputs > \SI{3}{\volt} for a maximum input and < \SI{0.3}{\volt} for the minimum input. The figure also demonstrates the circuits compliance to the noise and response time requirements with noise levels of \SI{58}{\milli\volt}pk-pk and a response time of \SI{386}{\milli\second}.
+
+Figure: \ref{fig:sonicsen_sim_cur} shows that throughout circuit operation current draw is < \SI{170}{\micro\ampere}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.5\textwidth]{./Figures/SonicSens_RangeStep.png}
+\caption{Circuit response to a full range step from 10\% to 0.5\% duty cycle}
+\label{fig:sonicsen_sim_step}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.5\textwidth]{./Figures/SonicSens_CurDraw.png}
+\caption{Current draw vs circuit output}
+\label{fig:sonicsen_sim_cur}
+\end{figure}

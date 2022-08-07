@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.14)  31 JUL 2022 21:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.14)  7 AUG 2022 12:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -636,20 +636,8 @@ LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
 
 (D:\LATEX\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) (e344_A1_report.aux (Chapter1.aux
-
-LaTeX Warning: Label `subfig:linear_circuit_diagram' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:linear_circuit_diagram' multiply defined.
-
-
-LaTeX Warning: Label `subfig:switchmode_circuit_diagram' multiply defined.
-
-
-LaTeX Warning: Label `sub@subfig:switchmode_circuit_diagram' multiply defined.
-
-) (Chapter2.aux) (Chapter3.aux) (Chapter4.aux) (Chapter5.aux) (Chapter6.aux)
+) (e344_A1_report.aux (Chapter1.aux)
+(Chapter2.aux) (Chapter3.aux) (Chapter4.aux) (Chapter5.aux) (Chapter6.aux)
 (App-A.aux) (App-B.aux))
 \openout1 = `e344_A1_report.aux'.
 
@@ -800,7 +788,7 @@ LaTeX Info: Redefining \nameref on input line 111.
 
 pdfTeX warning: pdflatex (file ./frontmatter/fig/SU_logo_RGB_without_slogan.pdf
 ): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<frontmatter/fig/SU_logo_RGB_without_slogan.pdf, id=79, 441.01764pt x 506.96803
+<frontmatter/fig/SU_logo_RGB_without_slogan.pdf, id=91, 441.01764pt x 506.96803
 pt>
 File: frontmatter/fig/SU_logo_RGB_without_slogan.pdf Graphic file (type pdf)
 <use frontmatter/fig/SU_logo_RGB_without_slogan.pdf>
@@ -823,7 +811,7 @@ r/fig/SU_logo_RGB_without_slogan.pdf>]) (frontmatter/declaration.tex
 
 pdfTeX warning: pdflatex (file ./frontmatter/fig/SU_horizontal_RGB.pdf): PDF in
 clusion: found PDF version <1.6>, but at most version <1.5> allowed
-<frontmatter/fig/SU_horizontal_RGB.pdf, id=100, 835.26556pt x 283.70393pt>
+<frontmatter/fig/SU_horizontal_RGB.pdf, id=112, 835.26556pt x 283.70393pt>
 File: frontmatter/fig/SU_horizontal_RGB.pdf Graphic file (type pdf)
 <use frontmatter/fig/SU_horizontal_RGB.pdf>
 Package pdftex.def Info: frontmatter/fig/SU_horizontal_RGB.pdf  used on input l
@@ -874,7 +862,7 @@ Chapter 1.
 
 
 ]
-<./Figures/Follower.png, id=216, 536.75531pt x 388.45125pt>
+<./Figures/Follower.png, id=252, 536.75531pt x 388.45125pt>
 File: ./Figures/Follower.png Graphic file (type png)
 <use ./Figures/Follower.png>
 Package pdftex.def Info: ./Figures/Follower.png  used on input line 28.
@@ -885,20 +873,20 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 31.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 31.
-<./Figures/Inverting.png, id=220, 529.22719pt x 396.7322pt>
+<./Figures/Inverting.png, id=256, 529.22719pt x 396.7322pt>
 File: ./Figures/Inverting.png Graphic file (type png)
 <use ./Figures/Inverting.png>
 Package pdftex.def Info: ./Figures/Inverting.png  used on input line 33.
 (pdftex.def)             Requested size: 212.54073pt x 159.33174pt.
-<./Figures/NonInverting.png, id=223, 586.44093pt x 496.10344pt>
+<./Figures/NonInverting.png, id=259, 586.44093pt x 496.10344pt>
 File: ./Figures/NonInverting.png Graphic file (type png)
 <use ./Figures/NonInverting.png>
-Package pdftex.def Info: ./Figures/NonInverting.png  used on input line 37.
+Package pdftex.def Info: ./Figures/NonInverting.png  used on input line 38.
 (pdftex.def)             Requested size: 212.54073pt x 179.8007pt.
-<./Figures/Differential.png, id=226, 577.40718pt x 549.55313pt>
+<./Figures/Differential.png, id=262, 577.40718pt x 549.55313pt>
 File: ./Figures/Differential.png Graphic file (type png)
 <use ./Figures/Differential.png>
-Package pdftex.def Info: ./Figures/Differential.png  used on input line 42.
+Package pdftex.def Info: ./Figures/Differential.png  used on input line 43.
 (pdftex.def)             Requested size: 212.54073pt x 202.29167pt.
  [2 <./Figures/Follower.png> <./Figures/Inverting.png> <./Figures/NonInverting.
 png> <./Figures/Differential.png>]) [3]
@@ -906,96 +894,134 @@ png> <./Figures/Differential.png>]) [3]
 
  (Chapter2.tex
 Chapter 2.
-<./Figures/CurSens_SimCir.png, id=255, 816.80156pt x 347.79938pt>
+<./Figures/CurSens_SimCir.png, id=291, 816.80156pt x 347.79938pt>
 File: ./Figures/CurSens_SimCir.png Graphic file (type png)
 <use ./Figures/CurSens_SimCir.png>
 Package pdftex.def Info: ./Figures/CurSens_SimCir.png  used on input line 11.
 (pdftex.def)             Requested size: 307.00247pt x 130.72163pt.
-) [4
+[4
 
 
 
 
  <./Figures/CurSens_SimCir.png>]
+
+Package caption Warning: \label without proper reference on input line 42.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `tbl:sens_cutoff' on page 5 undefined on input line 40
+.
+
+[5]
+<./Figures/SonicSens_Filter.png, id=324, 441.14813pt x 180.675pt>
+File: ./Figures/SonicSens_Filter.png Graphic file (type png)
+<use ./Figures/SonicSens_Filter.png>
+Package pdftex.def Info: ./Figures/SonicSens_Filter.png  used on input line 69.
+
+(pdftex.def)             Requested size: 236.15797pt x 96.71944pt.
+<./Figures/SonicSens_Diagram.png, id=327, 843.15pt x 243.15843pt>
+File: ./Figures/SonicSens_Diagram.png Graphic file (type png)
+<use ./Figures/SonicSens_Diagram.png>
+Package pdftex.def Info: ./Figures/SonicSens_Diagram.png  used on input line 76
+.
+(pdftex.def)             Requested size: 236.15797pt x 68.10616pt.
+) [6 <./Figures/SonicSens_Filter.png> <./Figures/SonicSens_Diagram.png>]
 \openout2 = `Chapter3.aux'.
 
- (Chapter3.tex
+
+(Chapter3.tex
 Chapter 3.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 8
 .
 (D:\LATEX\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<./Figures/CurSens_NoiseResp.png, id=266, 1444.64719pt x 692.5875pt>
+<./Figures/CurSens_NoiseResp.png, id=341, 1444.64719pt x 692.5875pt>
 File: ./Figures/CurSens_NoiseResp.png Graphic file (type png)
 <use ./Figures/CurSens_NoiseResp.png>
 Package pdftex.def Info: ./Figures/CurSens_NoiseResp.png  used on input line 13
 .
 (pdftex.def)             Requested size: 212.54073pt x 101.88628pt.
-<./Figures/CurSens_StepResp.png, id=267, 1444.64719pt x 690.32906pt>
+<./Figures/CurSens_StepResp.png, id=342, 1444.64719pt x 690.32906pt>
 File: ./Figures/CurSens_StepResp.png Graphic file (type png)
 <use ./Figures/CurSens_StepResp.png>
 Package pdftex.def Info: ./Figures/CurSens_StepResp.png  used on input line 19.
 
 (pdftex.def)             Requested size: 212.54073pt x 101.55405pt.
-<./Figures/CurSens_CurDraw.png, id=268, 1444.64719pt x 694.84593pt>
+<./Figures/CurSens_CurDraw.png, id=343, 1444.64719pt x 694.84593pt>
 File: ./Figures/CurSens_CurDraw.png Graphic file (type png)
 <use ./Figures/CurSens_CurDraw.png>
 Package pdftex.def Info: ./Figures/CurSens_CurDraw.png  used on input line 25.
 (pdftex.def)             Requested size: 212.54073pt x 102.21852pt.
- [5
+ [7
 
 
 
 
  <./Figures/CurSens_NoiseResp.png> <./Figures/CurSens_StepResp.png> <./Figures/
 CurSens_CurDraw.png>]
-<./Figures/CurSens_Prac_0input.jpeg, id=286, 752.8125pt x 625.58719pt>
+<./Figures/CurSens_Prac_0input.jpeg, id=361, 752.8125pt x 625.58719pt>
 File: ./Figures/CurSens_Prac_0input.jpeg Graphic file (type jpg)
 <use ./Figures/CurSens_Prac_0input.jpeg>
 Package pdftex.def Info: ./Figures/CurSens_Prac_0input.jpeg  used on input line
  52.
 (pdftex.def)             Requested size: 141.69621pt x 117.74596pt.
-<./Figures/CurSens_Prac_Free.jpeg, id=287, 925.95938pt x 664.73344pt>
+<./Figures/CurSens_Prac_Free.jpeg, id=362, 925.95938pt x 664.73344pt>
 File: ./Figures/CurSens_Prac_Free.jpeg Graphic file (type jpg)
 <use ./Figures/CurSens_Prac_Free.jpeg>
 Package pdftex.def Info: ./Figures/CurSens_Prac_Free.jpeg  used on input line 5
 8.
 (pdftex.def)             Requested size: 141.69621pt x 101.71402pt.
-<./Figures/CurSens_Prac_Slight.jpeg, id=288, 948.54375pt x 696.35156pt>
+<./Figures/CurSens_Prac_Slight.jpeg, id=363, 948.54375pt x 696.35156pt>
 File: ./Figures/CurSens_Prac_Slight.jpeg Graphic file (type jpg)
 <use ./Figures/CurSens_Prac_Slight.jpeg>
 Package pdftex.def Info: ./Figures/CurSens_Prac_Slight.jpeg  used on input line
  64.
 (pdftex.def)             Requested size: 141.69621pt x 104.02321pt.
-<./Figures/CurSens_Prac_Stall.jpeg, id=289, 768.62157pt x 639.13782pt>
+<./Figures/CurSens_Prac_Stall.jpeg, id=364, 768.62157pt x 639.13782pt>
 File: ./Figures/CurSens_Prac_Stall.jpeg Graphic file (type jpg)
 <use ./Figures/CurSens_Prac_Stall.jpeg>
 Package pdftex.def Info: ./Figures/CurSens_Prac_Stall.jpeg  used on input line 
 70.
 (pdftex.def)             Requested size: 141.69621pt x 117.81929pt.
-<./Figures/CurSens_Prac_Noise.jpeg, id=290, 764.8575pt x 574.39594pt>
+<./Figures/CurSens_Prac_Noise.jpeg, id=365, 764.8575pt x 574.39594pt>
 File: ./Figures/CurSens_Prac_Noise.jpeg Graphic file (type jpg)
 <use ./Figures/CurSens_Prac_Noise.jpeg>
 Package pdftex.def Info: ./Figures/CurSens_Prac_Noise.jpeg  used on input line 
 76.
 (pdftex.def)             Requested size: 141.69621pt x 106.41057pt.
-<./Figures/CurSens_Prac_Step.jpeg, id=291, 883.80188pt x 668.4975pt>
+<./Figures/CurSens_Prac_Step.jpeg, id=366, 883.80188pt x 668.4975pt>
 File: ./Figures/CurSens_Prac_Step.jpeg Graphic file (type jpg)
 <use ./Figures/CurSens_Prac_Step.jpeg>
 Package pdftex.def Info: ./Figures/CurSens_Prac_Step.jpeg  used on input line 8
 2.
 (pdftex.def)             Requested size: 141.69621pt x 107.176pt.
- [6 <./Figures/CurSens_Prac_0input.jpeg> <./Figures/CurSens_Prac_Free.jpeg> <./
+ [8 <./Figures/CurSens_Prac_0input.jpeg> <./Figures/CurSens_Prac_Free.jpeg> <./
 Figures/CurSens_Prac_Slight.jpeg> <./Figures/CurSens_Prac_Stall.jpeg> <./Figure
 s/CurSens_Prac_Noise.jpeg> <./Figures/CurSens_Prac_Step.jpeg>]
-<./Figures/Cursens_Cir_Card.jpeg, id=296, 903.375pt x 1204.5pt>
+<./Figures/Cursens_Cir_Card.jpeg, id=371, 903.375pt x 1204.5pt>
 File: ./Figures/Cursens_Cir_Card.jpeg Graphic file (type jpg)
 <use ./Figures/Cursens_Cir_Card.jpeg>
 Package pdftex.def Info: ./Figures/Cursens_Cir_Card.jpeg  used on input line 95
 .
 (pdftex.def)             Requested size: 425.08147pt x 566.77673pt.
-) [7 <./Figures/Cursens_Cir_Card.jpeg>]
+ [9 <./Figures/Cursens_Cir_Card.jpeg>]
+<./Figures/SonicSens_RangeStep.png, id=378, 835.62187pt x 469.755pt>
+File: ./Figures/SonicSens_RangeStep.png Graphic file (type png)
+<use ./Figures/SonicSens_RangeStep.png>
+Package pdftex.def Info: ./Figures/SonicSens_RangeStep.png  used on input line 
+110.
+(pdftex.def)             Requested size: 236.15797pt x 132.75621pt.
+<./Figures/SonicSens_CurDraw.png, id=379, 686.565pt x 435.87843pt>
+File: ./Figures/SonicSens_CurDraw.png Graphic file (type png)
+<use ./Figures/SonicSens_CurDraw.png>
+Package pdftex.def Info: ./Figures/SonicSens_CurDraw.png  used on input line 11
+7.
+(pdftex.def)             Requested size: 236.15797pt x 149.92595pt.
+) [10
+
+ <./Figures/SonicSens_RangeStep.png> <./Figures/SonicSens_CurDraw.png>]
 \openout2 = `Chapter4.aux'.
 
 
@@ -1006,7 +1032,7 @@ No file Chapter5.tex.
 \openout2 = `Chapter6.aux'.
 
 No file Chapter6.tex.
-(e344_A1_report.bbl) [8
+(e344_A1_report.bbl) [11
 
 
 
@@ -1024,12 +1050,12 @@ No file Chapter6.tex.
 
  (App-A.tex
 Appendix A.
-<./Figures/SocialContract.png, id=318, 341.02406pt x 482.55281pt>
+<./Figures/SocialContract.png, id=404, 341.02406pt x 482.55281pt>
 File: ./Figures/SocialContract.png Graphic file (type png)
 <use ./Figures/SocialContract.png>
 Package pdftex.def Info: ./Figures/SocialContract.png  used on input line 6.
 (pdftex.def)             Requested size: 377.85419pt x 534.69746pt.
-) [9
+) [12
 
 
  <./Figures/SocialContract.png>]
@@ -1037,17 +1063,17 @@ Package pdftex.def Info: ./Figures/SocialContract.png  used on input line 6.
 
  (App-B.tex
 Appendix B.
-<./Figures/GitHub.png, id=325, 1428.83812pt x 680.5425pt>
+<./Figures/GitHub.png, id=411, 1466.47874pt x 663.98062pt>
 File: ./Figures/GitHub.png Graphic file (type png)
 <use ./Figures/GitHub.png>
 Package pdftex.def Info: ./Figures/GitHub.png  used on input line 6.
-(pdftex.def)             Requested size: 472.31595pt x 224.95355pt.
+(pdftex.def)             Requested size: 472.31595pt x 213.84589pt.
 
 Overfull \hbox (6.79999pt too wide) in paragraph at lines 6--8
  [][] 
  []
 
-) [10
+) [13
 
 
 
@@ -1060,32 +1086,33 @@ See the caption package documentation for explanation.
 (e344_A1_report.aux (Chapter1.aux) (Chapter2.aux) (Chapter3.aux) (Chapter4.aux)
 (Chapter5.aux) (Chapter6.aux) (App-A.aux) (App-B.aux))
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `e344_A1_report.out' has not changed.
-(rerunfilecheck)             Checksum: D2C87EEA4E332980AF81213EC799758A;2318.
+(rerunfilecheck)             Checksum: D7A001FA9046D43269805407E1F228C5;2772.
  ) 
 Here is how much of TeX's memory you used:
- 22032 strings out of 478659
- 412042 string characters out of 2859579
- 810219 words of memory out of 3000000
- 39478 multiletter control sequences out of 15000+600000
- 486413 words of font info for 164 fonts, out of 8000000 for 9000
+ 22114 strings out of 478659
+ 413762 string characters out of 2859579
+ 815242 words of memory out of 3000000
+ 39522 multiletter control sequences out of 15000+600000
+ 487109 words of font info for 172 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,13n,79p,1013b,797s stack positions out of 5000i,500n,10000p,200000b,80000s
-{D:/LATEX/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{D:/LATEX/MiKTeX/fonts/enc/
-dvips/lm/lm-ts1.enc}{D:/LATEX/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{D:/LATEX/MiK
+{D:/LATEX/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{D:/LATEX/MiKTeX/fonts/enc/dvi
+ps/lm/lm-rm.enc}{D:/LATEX/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{D:/LATEX/MiK
 TeX/fonts/enc/dvips/lm/lm-mathit.enc}<D:/LATEX/MiKTeX/fonts/type1/public/lm/lmb
 x12.pfb><D:/LATEX/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><D:/LATEX/MiKTeX/font
-s/type1/public/lm/lmmi8.pfb><D:/LATEX/MiKTeX/fonts/type1/public/lm/lmr10.pfb><D
-:/LATEX/MiKTeX/fonts/type1/public/lm/lmr12.pfb><D:/LATEX/MiKTeX/fonts/type1/pub
-lic/lm/lmr17.pfb><D:/LATEX/MiKTeX/fonts/type1/public/lm/lmri12.pfb><D:/LATEX/Mi
-KTeX/fonts/type1/public/lm/lmssbo10.pfb><D:/LATEX/MiKTeX/fonts/type1/public/lm/
-lmssbx10.pfb><D:/LATEX/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><D:/LATEX/MiKTeX
-/fonts/type1/public/lm/lmsy8.pfb>
-Output written on e344_A1_report.pdf (16 pages, 3060582 bytes).
+s/type1/public/lm/lmmi6.pfb><D:/LATEX/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><D
+:/LATEX/MiKTeX/fonts/type1/public/lm/lmr10.pfb><D:/LATEX/MiKTeX/fonts/type1/pub
+lic/lm/lmr12.pfb><D:/LATEX/MiKTeX/fonts/type1/public/lm/lmr17.pfb><D:/LATEX/MiK
+TeX/fonts/type1/public/lm/lmr8.pfb><D:/LATEX/MiKTeX/fonts/type1/public/lm/lmri1
+2.pfb><D:/LATEX/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><D:/LATEX/MiKTeX/font
+s/type1/public/lm/lmssbx10.pfb><D:/LATEX/MiKTeX/fonts/type1/public/lm/lmsy10.pf
+b><D:/LATEX/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
+Output written on e344_A1_report.pdf (19 pages, 3183597 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 500000)
- 53501 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 498 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
+ 53545 words of extra memory for PDF output out of 61914 (max. 10000000)
 
