@@ -39,7 +39,7 @@ F_{cutoff} &= 10^{2\pi \cdot log(w)}\label{eqn:sens_cutoff}
 
 To determine what order filter to use Equation \ref{eqn:sens_cutoff} was solved using the different gradients for 1st, 2nd and 3rd order filters. Table \ref{tbl:sens_cutoff} shows the results of these calculations. In order to adhere to the response time specifications of \SI{1.5}{\second} it was decided that a 3rd order filter would have the best response time and noise attenuation without being to complex to build. 
 
-\begin{table}\label{tbl:sens_cutoff}
+\begin{table}
 \begin{center}
 \begin{tabular}{|c|c|c|}
 \hline
@@ -52,6 +52,7 @@ Filter & Gradient & Maximum corner frequency\\
 \end{tabular}
 \end{center}
 \caption{Filters and their maximum required corner frequency}
+\label{tbl:sens_cutoff}
 \end{table}
 
 Design document \cite{Design_SonicSens_Filter} was used in the design of the 3rd order filter. Figure: \ref{fig:sonicsens_filter} shows the filter configuration that will be used. A simple gain stage will be appended to the end of the filter and then a voltage divider will ensure that the final output voltage is less than \SI{3.3}{\volt}. The whole circuit diagram is shown in Figure: \ref{fig:sonicsens_diag}. The circuit is designed to take input with an amplitude of \SI{5}{\volt} with a duty cycle between 0\% and 10\%.

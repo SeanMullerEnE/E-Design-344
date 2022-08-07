@@ -118,3 +118,34 @@ Figure: \ref{fig:sonicsen_sim_cur} shows that throughout circuit operation curre
 \caption{Current draw vs circuit output}
 \label{fig:sonicsen_sim_cur}
 \end{figure}
+
+\subsection{Practical}
+
+Figure: \ref{fig:sonicsen_sim_step} shows the output response to a step change from \SI{1}{\meter} to \SI{5}{\centi\meter} back to \SI{1}{\meter}. The figure also shows the compliance to the requirements with the \SI{1}{\meter} measurement having an output of \SI{3.24}{\volt} and an output of \SI{200}{\milli\volt} at \SI{5}{\centi\meter}. The figure also shows a compliance with the rise time of \SI{258}{\milli\second}.
+
+Figure: \ref{subfig:sonicsen_prac_ripple} shows that the output ripple voltage is less than \SI{70}{\milli\volt}pk-pk at \SI{1}{\meter} when the ripple voltage will be at its worst.
+
+Figure: \ref{subfig:sonicsen_prac_range} shows the circuit response to a gradual change in the input across the full range from close to far.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\linewidth]{./Figures/SonicSens_Prac_Step.jpeg}
+\caption{Circuit response a step input.}
+\label{subfig:sonicsen_prac_step}	
+\end{subfigure}
+\hfill
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\linewidth]{./Figures/SonicSens_Prac_Ripple.jpeg}
+\caption{Circuit ripple voltage at 1m.} 			
+\label{subfig:sonicsen_prac_ripple}	
+\end{subfigure}
+\vfill
+\begin{subfigure}[]{0.45\textwidth}
+\includegraphics[width=\linewidth]{./Figures/SonicSens_Prac_Range.jpeg}
+\caption{Circuit response to smooth change in range measurement.}
+\label{subfig:sonicsen_prac_range}	
+\end{subfigure}
+\caption{Ultrasonic sensor filter circuit responses.}
+\label{fig:sonicsen_prac}
+\end{figure}

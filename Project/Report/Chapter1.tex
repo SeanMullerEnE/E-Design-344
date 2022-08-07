@@ -64,11 +64,35 @@ High-side vs low-side current sensing is only applicable for invasive methods li
 \clearpage
 \section{Ultrasonic range sensor}
 \subsection{Interfacing with the ultrasonic range sensor}
-The datasheet fo the HC-SR04 shows a \SI{5}{\volt} supply is required and the sensor uses \SI{15}{\milli\ampere} when operating \cite{Design_SonicSens}. Which results in an operating power usage of \SI{75}{\milli\watt}.
-Voltage and time aspects of the trigger
-Voltage and time aspects of the echo and how it relates to distance
+The datasheet of the HC-SR04 shows a \SI{5}{\volt} supply is required and the sensor uses \SI{15}{\milli\ampere} when operating \cite{Design_SonicSens}. Which results in an operating power usage of \SI{75}{\milli\watt}.
 
+
+In order to trigger the sensor to send out a sonic pulse an input trigger is required for atleast \SI{10}{\micro\second} at high TTL levels \cite{Design_SonicSens} \cite{Design_SonicSens}. The trigger must be sent at least \SI{60}{\milli\second} apart to prevent false outputs due to the delayed echo\cite{Design_SonicSens}. See Figure: \ref{fig:sonicsen_timing} for a timing diagram showing the relationship between the input trigger the sonic pulse and the output from the module.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{./Figures/SonicSens_Timing.png}
+\caption{Timing diagram for ultrasonic sensor\cite{Design_SonicSens}}
+\label{fig:sonicsen_timing}	
+\end{figure}
+
+The ultrasonic sensor determines the range of an object that it is pointed at by sending out a set of 8 sonic pulses at \SI{40}{\kilo\hertz} when triggered \cite{Design_SonicSens}.  Once the set of pulse is sent the output is set to high until the sensor detects the return of pulse, at which point it drives the output low. With a regular interval trigger this results in a PWM output signal where the duty cycle corresponds to the distance between the sensor and the object it is facing. This distance is determined by using the speed of sound through air and half the time it takes for the echo to come back as shown in Equation: \ref{eqn:sonicsesns_lit_dist} \cite{Design_SonicSens}.
+
+\begin{align}\label{eqn:sonicsesns_lit_dist}
+Distance & = \frac{OutputHighTime \cdot SpeedOfSound}{2}
+\end{align}
+
+\newpage
 \subsection{Converting PWM signals to analogue signals}
-duty cycle
-frequency
-filter specification
+A PWM signal can be treated as the sum of a DC signal and a square-wave of equivalent duty cycle, as shown in Figure: \ref{fig:sonicsen_pwm}. Converting a PWM signal to its Fourier series equivalent shows that this DC component is equal to the amplitude of the PWM signal multiplied with the duty cycle\cite{Design_SonicSens_Filter}.
+
+The core concept behind getting a analogue signal from a PWM signal is to use a low pass filter to remove the higher frequency components and leave the DC component \cite{Design_SonicSens_Filter}. The frequency of the PWM signal determines the frequency of the first harmonic as this harmonic will occur at the same frequency of the PWM signal.
+
+Since it is impossible to physically realise a idea low pass filter the cut-off frequency must be set lower than the frequency of the PWM signal. This results in a trade of between the attenuation of the ripple voltage caused by the first harmonic of the PWM signal and the frequency at which the duty cycle of the PWM signal can be varied \cite{Design_SonicSens_Filter}. Increasing the order of the filter result in a better approximation of ideal low pass filter and allows for the cut-off frequency to be increased without sacrificing attenuation of the first harmonic.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{./Figures/SonicSens_PWM.png}
+\caption{Decomposition of a PWM signal\cite{Design_SonicSens_Filter}.}
+\label{fig:sonicsen_pwm}	
+\end{figure}
