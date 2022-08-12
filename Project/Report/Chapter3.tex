@@ -30,8 +30,7 @@ Figure \ref{fig:cursen_sim_res} shows the simulation results for the circuit sho
 \label{fig:cursen_sim_res}
 \end{figure}
 
-\newpage
-
+\clearpage
 \subsection{Practical}
 As shown in Figure:\ref{fig:cursen_prac_resp} the practical results match the simulated results shown in Figure: \ref{fig:cursen_sim_res}. 
 
@@ -119,6 +118,7 @@ Figure: \ref{fig:sonicsen_sim_cur} shows that throughout circuit operation curre
 \label{fig:sonicsen_sim_cur}
 \end{figure}
 
+\clearpage
 \subsection{Practical}
 
 Figure: \ref{fig:sonicsen_sim_step} shows the output response to a step change from \SI{1}{\meter} to \SI{5}{\centi\meter} back to \SI{1}{\meter}. The figure also shows the compliance to the requirements with the \SI{1}{\meter} measurement having an output of \SI{3.24}{\volt} and an output of \SI{200}{\milli\volt} at \SI{5}{\centi\meter}. The figure also shows a compliance with the rise time of \SI{258}{\milli\second}.
@@ -148,4 +148,84 @@ Figure: \ref{subfig:sonicsen_prac_range} shows the circuit response to a gradual
 \end{subfigure}
 \caption{Ultrasonic sensor filter circuit responses.}
 \label{fig:sonicsen_prac}
+\end{figure}
+
+\newpage
+\subsection{Circuit}
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.9\textwidth]{./Figures/SonicSens_Cir_Card.jpeg}
+\caption{Labelled circuit and student card.}
+\label{fig:sonicsen_cir_card}
+\end{figure}
+
+\clearpage
+\section{Digital to analogue converter}
+\subsection{Simulation}
+Figure: \ref{fig:dac_sim_out} shows the simulation output vs the given input and that the simulated results match the requirements. Figure: \ref{fig:dac_sim_cur} shows that the current draw for the simulated circuit is at acceptable levels.  
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.7\textwidth]{./Figures/DAC_Sim_Out.png}
+\caption{Output vs input of DAC.}
+\label{fig:dac_sim_out}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.7\textwidth]{./Figures/DAC_Sim_Cur.png}
+\caption{Current draw of the DAC circuit}
+\label{fig:dac_sim_cur}
+\end{figure}
+
+\clearpage
+\subsection{Practical}
+Figure: \ref{fig:dac_prac} shows the DAC response to different inputs. Figure: \ref{subfig:dac_prac_0000} shows that the circuit complies with the requirement to have an output larger than \SI{3}{\volt} for an input of 0. Figure: \ref{subfig:dac_prac_1111} shows the circuit complies with the requirement that the output is less than \SI{0.5}{\volt}.
+\begin{figure}[H]
+\centering
+\begin{subfigure}[]{0.3\textwidth}
+\includegraphics[width=\linewidth]{./Figures/DAC_Prac_0000.jpeg}
+\caption{DAC output for 0000 input.}
+\label{subfig:dac_prac_0000}	
+\end{subfigure}
+\hfill
+\begin{subfigure}[]{0.3\textwidth}
+\includegraphics[width=\linewidth]{./Figures/DAC_Prac_0001.jpeg}
+\caption{DAC output for 0001 input.} 			
+\label{subfig:dac_prac_0001}	
+\end{subfigure}
+\hfill
+\begin{subfigure}[]{0.3\textwidth}
+\includegraphics[width=\linewidth]{./Figures/DAC_Prac_0011.jpeg}
+\caption{DAC output for 0011 input.} 			
+\label{subfig:dac_prac_0011}	
+\end{subfigure}
+\vfill
+\begin{subfigure}[]{0.3\textwidth}
+\includegraphics[width=\linewidth]{./Figures/DAC_Prac_0111.jpeg}
+\caption{DAC output for 0111 input.}
+\label{subfig:dac_prac_0111}	
+\end{subfigure}
+\hfill
+\begin{subfigure}[]{0.3\textwidth}
+\includegraphics[width=\linewidth]{./Figures/DAC_Prac_1111.jpeg}
+\caption{DAC output for 1111 input.}
+\label{subfig:dac_prac_1111}
+\end{subfigure}
+\hfill
+\begin{subfigure}[]{0.3\textwidth}
+\includegraphics[width=\linewidth]{./Figures/DAC_Prac_1110.jpeg}
+\caption{DAC output for 1110 input.} 			
+\label{subfig:dac_prac_1110}	
+\end{subfigure}
+\caption{DAC output for different inputs.}
+\label{fig:dac_prac}
+\end{figure}
+
+\clearpage
+\subsection{Circuit}
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.9\textwidth]{./Figures/DAC_Cir_Card.jpeg}
+\caption{Labelled circuit and student card for the DAC.}
+\label{fig:sonicsen_cir_card}
 \end{figure}

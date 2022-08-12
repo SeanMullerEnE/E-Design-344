@@ -74,9 +74,38 @@ The voltage divider, R7 and R8 in Figure: \ref{fig:sonicsens_diag}, is to reduce
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{./Figures/SonicSens_Diagram.png}
+\includegraphics[width=0.9\textwidth]{./Figures/SonicSens_Diagram.png}
 \caption{Filter configuration from \cite{Design_SonicSens_Filter}}
 \label{fig:sonicsens_diag}
+\end{figure}
+
+\clearpage
+\subsection{Digital to Analogue converter}
+The input impedance seen by each source is equal to the resistor between it and the inverting input \cite{Lit_SumAmp_ET}. Thus to reduce the effect of the output impedance of the source the smallest input resistor must be much larger than the output impedance.
+
+The operation of the DAC is not affected by the input impedance of the receiving circuit unless the input impedance is so low as to cause the op amp to reach it's current limits of \SI{23}{\milli\ampere} \cite{Data_MCP}. This will result in the op amp being unable to drive the required output voltage and the output voltage will be limited. A buffer will be added between the DAC and the output, this separates the output from the input and prevents any signal reflections from making it back to the input terminals.
+\medskip\\
+The MCP6242 has a common mode voltage range of $V_{SS} -0.3 < V_{CMR} < V_{DD} +0.3$ \cite{Data_MCP}. For the configuration shown in \ref{fig:DAC_sim_sumAmp} the common mode voltage will be the offset voltage applied at the positive terminal. As long as this offset voltage is less than the rail voltage there will be no problems with the op amps common mode voltage restrictions.
+
+The maximum expected input will be \SI{3.3}{\volt}. The maximum output is \SI{3.3}{\volt} however the configuration show in Figure: \ref{fig:DAC_sim_sumAmp} can output up to \SI{5}{\volt}, this can only happen if the input voltages go negative.
+
+$R_{off}$ is chosen to be \SI{100}{\kilo\ohm} in order to reduce current draw and $R_{base}$ is chosen to be \SI{50}{\kilo\ohm} to ensure high input impedance. Equation: \ref{eqn:DAC_rfr1} shows the relationship between the base resistor and the feedback resistor base on the maximum desired output. Equation: \ref{eqn:DAC_voff} shows what $V_{off}$ will be based on the maximum desired output. 
+
+Potentiometers will be used to control the offset voltage and gain of the op amp as theses values are critical to the correct operation of the circuit and will require tuning.
+
+ %V_{Out} &= V_{off} \left[1+ \frac{R_f}{R_1} \cdot \left(1+\frac{1}{2} + \frac{1}{4} + \frac{1}{8} \right) \right] - \frac{R_f}{R_1} \left[ V_{b3} +\frac{V_{b2}}{2} + \frac{V_{b1}}{4} + \frac{V_{b0}}{8} \right]\\
+ %V_{off} &= \frac{V_{OutMax}}{1+\frac{15 \cdot R_f}{8 \cdot R_1}}\\
+ %0 &= V_{off}\left[1+\frac{15 \cdot R_f}{8 \cdot R_1}\right] - \frac{15 \cdot R_f}{8 \cdot R_1} \cdot V_{InMax}\\
+\begin{align}
+\frac{R_f}{R_1} &= \frac{8 \cdot V_{OutMax}}{15 \cdot V_{InMax}}\label{eqn:DAC_rfr1}\\
+V_{off} &= \frac{V_{OutMax}}{1+\frac{V_{OutMax}}{V_{InMax}}}\label{eqn:DAC_voff}
+\end{align}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{./Figures/DAC_sim_cir.png}
+\caption{Summing amplifier configuration}
+\label{fig:DAC_sim_sumAmp}
 \end{figure}
 
 

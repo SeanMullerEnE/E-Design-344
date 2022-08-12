@@ -67,7 +67,7 @@ High-side vs low-side current sensing is only applicable for invasive methods li
 The datasheet of the HC-SR04 shows a \SI{5}{\volt} supply is required and the sensor uses \SI{15}{\milli\ampere} when operating \cite{Design_SonicSens}. Which results in an operating power usage of \SI{75}{\milli\watt}.
 
 
-In order to trigger the sensor to send out a sonic pulse an input trigger is required for atleast \SI{10}{\micro\second} at high TTL levels \cite{Design_SonicSens} \cite{Design_SonicSens}. The trigger must be sent at least \SI{60}{\milli\second} apart to prevent false outputs due to the delayed echo\cite{Design_SonicSens}. See Figure: \ref{fig:sonicsen_timing} for a timing diagram showing the relationship between the input trigger the sonic pulse and the output from the module.
+In order to trigger the sensor to send out a sonic pulse an input trigger is required for atleast \SI{10}{\micro\second} at high TTL levels \cite{Design_SonicSens}. The trigger must be sent at least \SI{60}{\milli\second} apart to prevent false outputs due to the delayed echo\cite{Design_SonicSens}. See Figure: \ref{fig:sonicsen_timing} for a timing diagram showing the relationship between the input trigger the sonic pulse and the output from the module.
 
 \begin{figure}[H]
 \centering
@@ -95,4 +95,35 @@ Since it is impossible to physically realise a idea low pass filter the cut-off 
 \includegraphics[width=0.5\textwidth]{./Figures/SonicSens_PWM.png}
 \caption{Decomposition of a PWM signal\cite{Design_SonicSens_Filter}.}
 \label{fig:sonicsen_pwm}	
+\end{figure}
+
+\newpage
+
+\subsection{Digital to analogue converter opamp}
+A summing amplifier works by combining several voltage inputs into one signal with no interference \cite{Lit_SumAmp}. The most common summing amplifier configuration is the inverting summing amplifier shown in Figure: \ref{subfig:inv_sum_amp}. This configuration makes the inverting node ideal for summing voltages as the non-inverting node is connected to ground the inverting node is now "virtual ground" \cite{Lit_SumAmp}. The gain for each input is given by the ratio between the feedback resistor and the input resistor.
+\medskip\\
+A non-inverting summing amplifier is similar to the inverting one however the inputs are connected to the positive terminal of the opamp as shown in Figure: \ref{subfig:noninv_sum_amp}. What makes this configuration less common is the fact that all inputs have an effect on all other inputs, this is due to the lack of "virtual ground" as seen in the inverting case \cite{Lit_SumAmp}. The advantages of a non-inverting configuration are that the input impedance is much higher than the inverting case and that the input summing part of the circuit is not affected by the changes to the amplifier's closed loop gain \cite{Lit_SumAmp_ET}.
+\medskip\\
+Common mode voltage range is based on the rail voltages supplied to the op amp but the specifics vary from op amp to op amp. Non-inverting op amps with the positive input terminal connected to ground don't have to consider common mode voltage however if the op amp has a offset at this terminal or is in a non-inverting configuration the common mode voltage gain will restrict what inputs result in a linear output. Since the common mode range is based on the rail voltage to increase the input range the rail voltages should be increased.
+\medskip\\
+Since the source for the binary signals are unideal they will have small output impedances, these sources typically can't drive high current. So in order to have most of the voltage drop occur across the summing circuit, the input impedance at the input terminals should be high.
+
+Op amps are unable to source infinite current so if the receiving circuit has too low of an input impedance the op amp won't be able to sustain the desired voltage output. 
+
+
+\begin{figure}[H]
+\footnotesize
+\centering
+\begin{subfigure}[]{0.35\textwidth}
+\includegraphics[width=\linewidth]{./Figures/DAC_InvAmp.png}
+\caption{Circuit diagram for an inverting summing amplifier \cite{Lit_SumAmp}.}
+\label{subfig:inv_sum_amp}	
+\end{subfigure}
+\begin{subfigure}[]{0.35\textwidth}
+\includegraphics[width=\linewidth]{./Figures/DAC_NonInvAmp.png}
+\caption{Circuit diagram for a non-inverting summing amplifier \cite{Lit_SumAmp}.}
+\label{subfig:noninv_sum_amp}	
+\end{subfigure}
+\caption {Circuit diagrams of 2 summing opamp configurations}.
+\label{fig:circuit_diagram}
 \end{figure}
