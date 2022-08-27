@@ -1,12 +1,29 @@
 \chapter{Detail design}\label{ch:detail_design}
 %**********************************************
+\section{System diagram}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth]{./Figures/SystemDiagram.png}
+\caption{System Diagram}
+\label{fig:systdiag}
+\end{figure}
+
+\clearpage
 \section{Current sensor}\label{sec:current_sensor_design}
-Currently being rewritten.
-\subsection{Opamp configuration}\label{sec:config}
+The maximum operating current of the motor will be taken as \SI{300}{\milli\ampere}. With an $R_{sense}$ of \SI{10}{\milli\ohm} resulting in a max output voltage of \SI{3}{\milli\volt}. Since the op amp output will clip at \SI{5}{\volt} a gain of 1666 is required to have the output reach its max at the operating limit.\\
 
+In order to filter out noise at the signal input a first order filter will be used. With the gain stated above the filtering will need to be quite hard to reduce noise at \SI{1}{\kilo\hertz} with an amplitude of \SI{10}{\milli\volt} to less than \SI{250}{\milli\volt} at the output. The following calculation was used to determine the cutoff frequency: 
 
-\subsection{Opamp design}
-\begin{figure}
+\begin{align*}
+Attenuation_{DB} & = 20 log \left( \frac{V_{noise-out(max)}}{V_{noise-in(max)} \cdot Gain} \right) \\
+\omega_{cutoff} & = \frac{-Attenuation_{DB}}{-20} + log(\omega_{noise})\\
+f_{cutoff} & = \frac{10^{\omega_{cutoff}}}{2 \pi}
+\end{align*}
+The above calculations result in a cutoff frequency of \SI{15}{\hertz}.The cutoff frequency and the response time of the circuit are inversely proportional. With the calculated cutoff frequency the response time of the circuit will be approximately \SI{70}{\milli\second} which meets the requirements. The noise on the output will be very close to \SI{250}{\milli\volt} with this cutoff frequency however a voltage divider will be placed on the output of the op amp in order to reduce the voltage to a \SI{3.3}{\volt} maximum. This will also reduce the noise amplitude to meet the specifications.\\
+
+Figure: \ref{fig:cursen_sim_cir} shows the circuit configuration for the design mentioned above. To reach the required gain $R_3$ was chosen to be \SI{3330}{\ohm} therefore $R_2$ must be \SI{560}{\kilo\ohm}. $C_1$ was chosen to be \SI{100}{\nano\farad}, using the cutoff frequency calculated above $R_4$ must be \SI{100}{\kilo\ohm}. The voltage divider must have a high resistance in order to not load the opamp to heavily so values of \SI{33}{\kilo\ohm} and \SI{66}{\kilo\ohm} were chosen for $R_4$ and $R_5$.
+
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.65\linewidth]{./Figures/CurSens_SimCir.png}
 \caption{Current sensing circuit design}
@@ -106,6 +123,49 @@ V_{off} &= \frac{V_{OutMax}}{1+\frac{V_{OutMax}}{V_{InMax}}}\label{eqn:DAC_voff}
 \includegraphics[width=0.5\textwidth]{./Figures/DAC_sim_cir.png}
 \caption{Summing amplifier configuration}
 \label{fig:DAC_sim_sumAmp}
+\end{figure}
+
+\clearpage
+\subsection{Motor control signal}
+The signal to control the motor speed must track the the input given by the micro controller but be limited by the input from the range sensor. A differential amplifier is perfect for this as it works as voltage subtractor. The configuration is shown in Figure: \ref{fig:mtrl_ctrl_dif}. 
+In order to give equal weighting to each input $R_1 = R_2$ and $R_3 = R_4$. This results in $V_{OUT} = \frac{R_3}{R_1} (V_2-V_1)$. It was chosen for $R_1$ and $R_2$ to be \SI{56}{\kilo\ohm} and $R_3$ and $R_4$ will be potentiometers to allow for tuning of the gain. The desired gain will be $\frac{V_{bat}}{3.3}$\\
+
+The max inputs will be \SI{3.3}{\volt} at each input which will result in a common mode voltage of < \SI{3.3}{\volt}. The max output of this control circuit must equal $V_{bat}$. Since the MCP6242 has max rail voltage of \SI{5.5}{\volt} a different op amp must be used. For this circuit the TLC2272 op amp will be used. This op amp can have up to \SI{8}{\volt} at it's positive rail and the maximum current draw is \SI{50}{\milli\ampere} \cite{TLC2272}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.6\textwidth]{./Figures/Mtr_Ctrl_Dif.png}
+\caption{Circuit diagram for a differential amplifier \cite{DifAmp}.}
+\label{fig:mtrl_ctrl_dif}
+\end{figure}
+
+\clearpage
+\subsection{Motor driver}
+Since the motor requires a large amount of current in order to be driven the op amp can't drive the motor directly. Thus a current amplifier stage is required between the op amp and the motor. Since the current gain of the power transistor is relatively small, only using a single transistor will cause the op amp to supply more current.//
+
+The op amp's ability to drive a voltage close to it's rail drops off sharply as the current draw increases \cite{TLC2272}. Thus a Darlington pair will significantly reduce the load placed on the op amp however this comes with the downside of reducing the maximum voltage that can be placed across the motor by the $V_{BE(on)}$ of the second transistor. With a Darlington pair made of a 2N2222 and a TIP31C as shown in Figure: \ref{fig:mtrctrl_darling} the max motor voltage is $V_{bat} - 1.4$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width =0.5\textwidth]{./Figures/Mtr_Ctrl_Darling_Cir.png}
+\caption{Darlington pair circuit configuration.}
+\label{fig:mtrctrl_darling}
+\end{figure} 
+
+\clearpage
+\subsection{Voltage regulation}
+Using the configuration shown in Figure: \ref{fig:volt_reg_diag} the following equation determines the output voltage:
+\begin{align*}
+V_{OUT} &= V_{REF} \left(1+\frac{R_2}{R_1}\right)
+\end{align*}
+
+With a desired output voltage of \SI{5}{\volt} and a reference voltage of \SI{1.25}{\volt} results in a resistor ratio of $3R_1 = R_2$. So resistors of \SI{820}{\ohm} and \SI{270}{\ohm} are chosen to reduce complexity.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.9\textwidth]{./Figures/Volt_Reg_Diag.png}
+\caption{Circuit diagram used for the voltage regulator \cite{LD1117}.}
+\label{fig:volt_reg_diag}
 \end{figure}
 
 

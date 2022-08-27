@@ -1,0 +1,106 @@
+Circuit: * D:\Engineering\2022\Semester 2\E Design 344\Project\Spice\E344_23575786_Ass3.asc
+
+Limiting rise time of source v11 to 0.0003
+Limiting fall time of source v11 to 0.0003
+Limiting rise time of source v10 to 0.0006
+Limiting fall time of source v10 to 0.0006
+Limiting rise time of source v9 to 5e-005
+Limiting fall time of source v9 to 5e-005
+Limiting rise time of source v8 to 0.0006
+Limiting fall time of source v8 to 0.0006
+WARNING: Node U6:MID is floating.
+WARNING: Node U8:MID is floating.
+
+WARNING: Less than two connections to node SPEEDCMD_ANALOG.  This node is used by R12.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+Gmin = 0.00100083
+vernier = 0.03125
+vernier = 0.015625
+vernier = 0.0078125
+vernier = 0.00390625
+vernier = 0.00195313
+Gmin = 0.00100083
+vernier = 0.000976563
+vernier = 0.000488281
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+vernier = 0.25
+Source Step = 1.70455%
+Source Step = 3.59848%
+Source Step = 5.49242%
+Source Step = 7.38636%
+Source Step = 9.2803%
+vernier = 0.09375
+Source Step = 11.9318%
+Source Step = 14.7727%
+Source Step = 17.6136%
+Source Step = 20.4545%
+Source Step = 23.2955%
+vernier = 0.140625
+Source Step = 27.1307%
+Source Step = 31.392%
+Source Step = 35.6534%
+Source Step = 39.9148%
+Source Step = 44.1761%
+vernier = 0.210938
+Source Step = 49.7159%
+Source Step = 56.108%
+Source Step = 62.5%
+Source Step = 68.892%
+Source Step = 75.2841%
+vernier = 0.316406
+Source Step = 83.2741%
+Source Step = 84.2517%
+Starting source stepping with srcstepmethod=1
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 93.9394%
+Source Step = 96.9815%
+Source stepping failed
+
+Pseudo transient terminated at 100.684 s, solution accepted ready or not!
+Heightened Def Con from 0.332105 to 0.332105
+Heightened Def Con from 0.332105 to 0.332105
+Heightened Def Con from 0.357219 to 0.357219
+Heightened Def Con from 0.357555 to 0.357555
+Heightened Def Con from 0.357858 to 0.357858
+Heightened Def Con from 2.44886 ++++++++++++++++++++++++to 2.44886
+Heightened Def Con from 2.45511 to 2.45511
+Heightened Def Con from 2.45522 to 2.45522
+Heightened Def Con from 3.64954 ++++++++++++++++++++++++to 3.64954
+Heightened Def Con from 4.24693 to 4.24693
+Heightened Def Con from 6.09452 to 6.09452
+Heightened Def Con from 6.12186 to 6.12186
+
+Date: Thu Aug 25 12:09:51 2022
+Total elapsed time: 20.476 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 69013
+traniter = 55081
+tranpoints = 19792
+accept = 14672
+rejected = 5290
+matrix size = 350
+fillins = 1164
+solver = Normal
+Thread vector: 61.5/29.4[8] 19.2/6.9[8] 24.3/11.1[8] 1.8/6.5[1]  2592/500
+Matrix Compiler1: 137.89 KB object code size  47.4/29.9/[12.4]
+Matrix Compiler2: 49.10 KB object code size  13.7/14.7/[5.3]
+

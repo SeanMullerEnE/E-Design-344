@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.14)  12 AUG 2022 19:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.3.14)  12 AUG 2022 19:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1182,11 +1182,11 @@ Package pdftex.def Info: ./Figures/SocialContract.png  used on input line 6.
 
  (App-B.tex
 Appendix B.
-<./Figures/GitHub.png, id=627, 1428.83812pt x 621.07031pt>
+<./Figures/GitHub.png, id=627, 1428.83812pt x 625.58719pt>
 File: ./Figures/GitHub.png Graphic file (type png)
 <use ./Figures/GitHub.png>
 Package pdftex.def Info: ./Figures/GitHub.png  used on input line 6.
-(pdftex.def)             Requested size: 425.08147pt x 184.76834pt.
+(pdftex.def)             Requested size: 425.08147pt x 186.1121pt.
 ) [22
 
 
@@ -1224,7 +1224,7 @@ TeX/fonts/type1/public/lm/lmr8.pfb><D:/LATEX/MiKTeX/fonts/type1/public/lm/lmri1
 2.pfb><D:/LATEX/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><D:/LATEX/MiKTeX/font
 s/type1/public/lm/lmssbx10.pfb><D:/LATEX/MiKTeX/fonts/type1/public/lm/lmsy10.pf
 b><D:/LATEX/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on e344_A1_report.pdf (29 pages, 5355781 bytes).
+Output written on e344_A1_report.pdf (29 pages, 5356223 bytes).
 PDF statistics:
  720 PDF objects out of 1000 (max. 8388607)
  114 named destinations out of 1000 (max. 500000)

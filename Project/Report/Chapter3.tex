@@ -86,16 +86,6 @@ The measure response time in Figure: \ref{subfig:cursen_prac_step} is \SI{24}{\m
 \label{fig:cursen_prac_resp}
 \end{figure}
 
-\newpage
-
-\subsection{Circuit}
-\begin{figure}[H]
-\centering
-\includegraphics[width = 0.9\textwidth]{./Figures/Cursens_Cir_Card.jpeg}
-\caption{Labelled circuit and student card.}
-\label{fig:cursen_cir_card}
-\end{figure}
-
 \clearpage
 \section{Ultrasonic range sensor}
 \subsection{Simulation}
@@ -150,69 +140,64 @@ Figure: \ref{subfig:sonicsen_prac_range} shows the circuit response to a gradual
 \label{fig:sonicsen_prac}
 \end{figure}
 
-\newpage
-\subsection{Circuit}
-\begin{figure}[H]
-\centering
-\includegraphics[width = 0.9\textwidth]{./Figures/SonicSens_Cir_Card.jpeg}
-\caption{Labelled circuit and student card.}
-\label{fig:sonicsen_cir_card}
-\end{figure}
 
 \clearpage
 \section{Digital to analogue converter}
 \subsection{Simulation}
-Figure: \ref{fig:dac_sim_out} shows the simulation output vs the given input and that the simulated results match the requirements. Figure: \ref{fig:dac_sim_cur} shows that the current draw for the simulated circuit is at acceptable levels.  
+Figure: \ref{fig:dac_sim_res} shows the simulation results and that the meet the specifications. 
 \begin{figure}[H]
 \centering
-\includegraphics[width = 0.7\textwidth]{./Figures/DAC_Sim_Out.png}
+\begin{subfigure}{0.3\textwidth}
+\includegraphics[width = \linewidth]{./Figures/DAC_Sim_Out.png}
 \caption{Output vs input of DAC.}
-\label{fig:dac_sim_out}
-\end{figure}
-
-\begin{figure}[H]
+\label{subfig:dac_sim_out}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.3\textwidth}
 \centering
-\includegraphics[width = 0.7\textwidth]{./Figures/DAC_Sim_Cur.png}
+\includegraphics[width = \linewidth]{./Figures/DAC_Sim_Cur.png}
 \caption{Current draw of the DAC circuit}
-\label{fig:dac_sim_cur}
+\label{subfig:dac_sim_cur}
+\end{subfigure}
+\caption{Simulation results of the DAC}
+\label{fig:dac_sim_res}
 \end{figure}
 
-\clearpage
 \subsection{Practical}
-Figure: \ref{fig:dac_prac} shows the DAC response to different inputs. Figure: \ref{subfig:dac_prac_0000} shows that the circuit complies with the requirement to have an output larger than \SI{3}{\volt} for an input of 0. Figure: \ref{subfig:dac_prac_1111} shows the circuit complies with the requirement that the output is less than \SI{0.5}{\volt}.
+Figure: \ref{fig:dac_prac} shows the DAC response to different inputs and that the DAC meets all the given specifications.
 \begin{figure}[H]
 \centering
-\begin{subfigure}[]{0.3\textwidth}
+\begin{subfigure}[]{0.2\textwidth}
 \includegraphics[width=\linewidth]{./Figures/DAC_Prac_0000.jpeg}
 \caption{DAC output for 0000 input.}
 \label{subfig:dac_prac_0000}	
 \end{subfigure}
 \hfill
-\begin{subfigure}[]{0.3\textwidth}
+\begin{subfigure}[]{0.2\textwidth}
 \includegraphics[width=\linewidth]{./Figures/DAC_Prac_0001.jpeg}
 \caption{DAC output for 0001 input.} 			
 \label{subfig:dac_prac_0001}	
 \end{subfigure}
 \hfill
-\begin{subfigure}[]{0.3\textwidth}
+\begin{subfigure}[]{0.2\textwidth}
 \includegraphics[width=\linewidth]{./Figures/DAC_Prac_0011.jpeg}
 \caption{DAC output for 0011 input.} 			
 \label{subfig:dac_prac_0011}	
 \end{subfigure}
 \vfill
-\begin{subfigure}[]{0.3\textwidth}
+\begin{subfigure}[]{0.2\textwidth}
 \includegraphics[width=\linewidth]{./Figures/DAC_Prac_0111.jpeg}
 \caption{DAC output for 0111 input.}
 \label{subfig:dac_prac_0111}	
 \end{subfigure}
 \hfill
-\begin{subfigure}[]{0.3\textwidth}
+\begin{subfigure}[]{0.2\textwidth}
 \includegraphics[width=\linewidth]{./Figures/DAC_Prac_1111.jpeg}
 \caption{DAC output for 1111 input.}
 \label{subfig:dac_prac_1111}
 \end{subfigure}
 \hfill
-\begin{subfigure}[]{0.3\textwidth}
+\begin{subfigure}[]{0.2\textwidth}
 \includegraphics[width=\linewidth]{./Figures/DAC_Prac_1110.jpeg}
 \caption{DAC output for 1110 input.} 			
 \label{subfig:dac_prac_1110}	
@@ -222,10 +207,96 @@ Figure: \ref{fig:dac_prac} shows the DAC response to different inputs. Figure: \
 \end{figure}
 
 \clearpage
+\section{Motor Control}
+\subsection{Simulation}
+\begin{figure}[H]
+\centering
+\begin{subfigure}[]{0.4\textwidth}
+\includegraphics[width=\linewidth]{./Figures/Mtr_Ctrl_Sub_Cir.png}
+\caption{Circuit diagram for the subtracting circuit.}
+\label{subfig:mtrctrl_sub_cir}	
+\end{subfigure}
+\hfill
+\begin{subfigure}[]{0.4\textwidth}
+\includegraphics[width=\linewidth]{./Figures/Mtr_Ctrl_Darling_Cir.png}
+\caption{Circuit diagram for the Darlington pair.} 			
+\label{subfig:mtrctrl_darling_cir}	
+\end{subfigure}
+\caption{Circuits used for motor control.}
+\label{fig:mtrctrl_cir}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}[]{0.4\textwidth}
+\includegraphics[width=\linewidth]{./Figures/Mtr_Ctrl_Sub_Out.png}
+\caption{Output vs input for the subtracting op amp.}
+\label{subfig:mtrctrl_sub_out}	
+\end{subfigure}
+\hfill
+\begin{subfigure}[]{0.4\textwidth}
+\includegraphics[width=\linewidth]{./Figures/Mtr_Ctrl_Darling_Out.png}
+\caption{Output for the Darlington pair.} 			
+\label{subfig:mtrctrl_darling_out}	
+\end{subfigure}
+\caption{Simulated circuit responses.}
+\label{fig:mtrctrl_out}
+\end{figure}
+
+
+\clearpage
+\subsection{Practical}
+\begin{figure}[H]
+\centering
+\begin{subfigure}[]{0.4\textwidth}
+\includegraphics[width=\linewidth]{./Figures/Mtr_Ctrl_Slow_Far.jpeg}
+\caption{Slow speed command and far object.}
+\label{subfig:mtrctrl_prac_sf}	
+\end{subfigure}
+\hfill
+\begin{subfigure}[]{0.4\textwidth}
+\includegraphics[width=\linewidth]{./Figures/Mtr_Ctrl_Slow_Close.jpeg}
+\caption{Slow speed command and close object.} 			
+\label{subfig:mtrctrl_prac_sc}	
+\end{subfigure}
+\begin{subfigure}[]{0.4\textwidth}
+\includegraphics[width=\linewidth]{./Figures/Mtr_Ctrl_Fast_Close.jpeg}
+\caption{Fast speed command and close object.}
+\label{subfig:mtrctrl_prac_fc}	
+\end{subfigure}
+\hfill
+\begin{subfigure}[]{0.4\textwidth}
+\includegraphics[width=\linewidth]{./Figures/Mtr_Ctrl_Fast_Far.jpeg}
+\caption{Fast speed command and far object.} 			
+\label{subfig:mtrctrl_prac_ff}	
+\end{subfigure}
+\caption{Motor voltage for different input conditions.}
+\label{fig:mtrctrl_prac}
+\end{figure}
+
+
+\clearpage
+\section{Voltage Regulation}
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.9\textwidth]{./Figures/Volt_Reg_Noise.jpeg}
+\caption{Voltage regulator output}
+\label{fig:volt_reg_noise}
+\end{figure}
+
+\clearpage
+\section{Photo's of Circuits}
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.9\textwidth]{./Figures/FullCircuit.jpeg}
+\caption{Labelled circuit of the current system}
+\label{fig:full_prac_cir}
+\end{figure}
+
 \subsection{Circuit}
 \begin{figure}[H]
 \centering
-\includegraphics[width = 0.9\textwidth]{./Figures/DAC_Cir_Card.jpeg}
-\caption{Labelled circuit and student card for the DAC.}
-\label{fig:sonicsen_cir_card}
+\includegraphics[width = 0.6\textwidth]{./Figures/Cursens_Cir_Card.jpeg}
+\caption{Labelled circuit of current sensor.}
+\label{fig:cursen_cir_card}
 \end{figure}

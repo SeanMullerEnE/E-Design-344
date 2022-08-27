@@ -1,0 +1,28 @@
+* D:\Engineering\2022\Semester 2\E Design 344\Project\Assignment 1\A1_LTSpiceTemplate\E344_23575786_A1.asc
+V2 N001 0 5
+RSense5V N001 5V 1µ
+R_sense R_sense_V N005 0.01
+I1 N005 R_sense_V PWL file=PWL.csv AC 0
+V1 N005 0 SINE(0m 10m 1000) AC 1
+R1 V_current 0 100k
+XU2 N004 N002 5V 0 N003 LTC6078
+R2 N002 N003 560k
+R3 N002 0 330
+R4 N004 R_sense_V 100k
+C1 N004 0 100n
+R5 V_current N003 34k
+R6 0 V_current 194k
+.tran 0 {transtop} 0
+.include A1cfg.txt
+* Don't change these -- used for auto-assessments.\nYou may modify the input files (.txt and .csv) \n               while developing.\nFor submission: \n  * Only one label name per net name\n  * Use only VSupply for power
+* Config file:
+* Analysis setup:
+* =============================\nREPLACE WITH YOUR DETAILS\nE. Stewdent.,  00024601\n=============================
+* ==========================================\nYour circuit goes here. Feel free to move things around. \n==========================================
+* PLEASE WAIT FOR YOUR SIMULATION TO FINISH BEFORE SUBMITTING.
+* 5V power supply\n(input to your circuit)
+* Current sense R voltage\n(input to your circuit)
+* Conditioned current sense R\n(output from your circuit)
+.lib LTC5.lib
+.backanno
+.end
