@@ -33,45 +33,45 @@ Warning--I'm ignoring CircuitDigest's extra "author" field
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 14 entries,
+You've used 18 entries,
             4087 wiz_defined-function locations,
-            905 strings with 9462 characters,
-and the built_in function-call counts, 4985 in all, are:
-= -- 363
-> -- 56
+            927 strings with 9959 characters,
+and the built_in function-call counts, 6441 in all, are:
+= -- 479
+> -- 72
 < -- 0
-+ -- 28
-- -- 14
-* -- 187
-:= -- 948
-add.period$ -- 28
-call.type$ -- 14
-change.case$ -- 14
++ -- 36
+- -- 18
+* -- 239
+:= -- 1228
+add.period$ -- 36
+call.type$ -- 18
+change.case$ -- 18
 chr.to.int$ -- 0
-cite$ -- 14
-duplicate$ -- 413
-empty$ -- 498
-format.name$ -- 14
-if$ -- 1059
+cite$ -- 18
+duplicate$ -- 533
+empty$ -- 642
+format.name$ -- 18
+if$ -- 1375
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 98
-newline$ -- 93
-num.names$ -- 14
-pop$ -- 322
+int.to.str$ -- 18
+missing$ -- 126
+newline$ -- 113
+num.names$ -- 18
+pop$ -- 410
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 363
+skip$ -- 475
 stack$ -- 0
-substring$ -- 14
-swap$ -- 210
+substring$ -- 18
+swap$ -- 274
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 14
+type$ -- 18
 warning$ -- 0
-while$ -- 14
-width$ -- 16
-write$ -- 155
+while$ -- 18
+width$ -- 20
+write$ -- 195
 (There was 1 warning)

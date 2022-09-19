@@ -97,7 +97,7 @@ The voltage divider, R7 and R8 in Figure: \ref{fig:sonicsens_diag}, is to reduce
 \end{figure}
 
 \clearpage
-\subsection{Digital to Analogue converter}
+\section{Digital to Analogue converter}
 The input impedance seen by each source is equal to the resistor between it and the inverting input \cite{Lit_SumAmp_ET}. Thus to reduce the effect of the output impedance of the source the smallest input resistor must be much larger than the output impedance.
 
 The operation of the DAC is not affected by the input impedance of the receiving circuit unless the input impedance is so low as to cause the op amp to reach it's current limits of \SI{23}{\milli\ampere} \cite{Data_MCP}. This will result in the op amp being unable to drive the required output voltage and the output voltage will be limited. A buffer will be added between the DAC and the output, this separates the output from the input and prevents any signal reflections from making it back to the input terminals.
@@ -126,7 +126,7 @@ V_{off} &= \frac{V_{OutMax}}{1+\frac{V_{OutMax}}{V_{InMax}}}\label{eqn:DAC_voff}
 \end{figure}
 
 \clearpage
-\subsection{Motor control signal}
+\section{Motor control signal}
 The signal to control the motor speed must track the the input given by the micro controller but be limited by the input from the range sensor. A differential amplifier is perfect for this as it works as voltage subtractor. The configuration is shown in Figure: \ref{fig:mtrl_ctrl_dif}. 
 In order to give equal weighting to each input $R_1 = R_2$ and $R_3 = R_4$. This results in $V_{OUT} = \frac{R_3}{R_1} (V_2-V_1)$. It was chosen for $R_1$ and $R_2$ to be \SI{56}{\kilo\ohm} and $R_3$ and $R_4$ will be potentiometers to allow for tuning of the gain. The desired gain will be $\frac{V_{bat}}{3.3}$\\
 
@@ -140,7 +140,7 @@ The max inputs will be \SI{3.3}{\volt} at each input which will result in a comm
 \end{figure}
 
 \clearpage
-\subsection{Motor driver}
+\section{Motor driver}
 Since the motor requires a large amount of current in order to be driven the op amp can't drive the motor directly. Thus a current amplifier stage is required between the op amp and the motor. Since the current gain of the power transistor is relatively small, only using a single transistor will cause the op amp to supply more current.//
 
 The op amp's ability to drive a voltage close to it's rail drops off sharply as the current draw increases \cite{TLC2272}. Thus a Darlington pair will significantly reduce the load placed on the op amp however this comes with the downside of reducing the maximum voltage that can be placed across the motor by the $V_{BE(on)}$ of the second transistor. With a Darlington pair made of a 2N2222 and a TIP31C as shown in Figure: \ref{fig:mtrctrl_darling} the max motor voltage is $V_{bat} - 1.4$.
@@ -153,7 +153,7 @@ The op amp's ability to drive a voltage close to it's rail drops off sharply as 
 \end{figure} 
 
 \clearpage
-\subsection{Voltage regulation}
+\section{Voltage regulation}
 Using the configuration shown in Figure: \ref{fig:volt_reg_diag} the following equation determines the output voltage:
 \begin{align*}
 V_{OUT} &= V_{REF} \left(1+\frac{R_2}{R_1}\right)
@@ -167,6 +167,64 @@ With a desired output voltage of \SI{5}{\volt} and a reference voltage of \SI{1.
 \caption{Circuit diagram used for the voltage regulator \cite{LD1117}.}
 \label{fig:volt_reg_diag}
 \end{figure}
+
+\clearpage
+\section{Low side switching circuit}
+
+The low side switching circuit will be implemented with a nmos transistor. The following transistors are options to be used, however not all meet the required specifications of the circuit. The relevant electronic specifications for each transistor are shown in \ref{tbl:nmos}. The threshold gate voltage must be less than \SI{3.3}{\volt} as the circuit needs to be controlled by the ESP. The transistor must be able to take current up to \SI{1.5}{\ampere} as if the motor stalls the switching circuit mustn't break. The series resistance must be low otherwise the voltage across the motor will be too low. The only transistor that follows these requirements is the FQD13N06L.
+
+A pull down resistor is required at the gate terminal of the nmos as if the board isn't driving the pin the gate will float and the motor will turn on. The resistor must be large enough not to load the ESP, thus a resistor of \SI{22}{\kilo\ohm} was chosen as this results in a current of \SI{150}{\micro\ampere}. The switching circuit can be seen in Figure:\ref{fig:low_switch_cir}.
+
+In order to determine what frequency PWM control signal to use the cut-off frequency for the motor circuit must be determined. Using a frequency test the inductance of the motor was found to be \SI{1.5}{\milli\henry} and the resistance is \SI{5.4}{\ohm}.The equation $f = \frac{1}{2 \pi \frac{L}{R}}$ is used to calculate the cutoff frequency. With the stated values this results in a cutoff frequency of \SI{573}{\hertz}. However using frequencies below \SI{20}{\kilo\hertz} results in a tone audible to humans therefore it is decided to use a frequency of \SI{20}{\kilo\hertz} as this is well within the limits of the transistor.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+& 2N7002 & FQD13N06L & IRF530 & IRF9Z24N\\
+\hline
+$V_{GS(Th)}$ (V)  &1 - 2.5 &1 -2.5  &2 - 4  &-2 - -4   \\ 
+$I_D$ (A)&0.17 &11  &14  &-12 \\ 
+$R_{D(on)}$  &3.2  &0.115  &0.16  &0.175  \\ 
+\hline
+\end{tabular}
+\caption{Electrical characteristics of different MOSFET's. \cite{2N7002} \cite{FQD13N06L} \cite{IRF530} \cite{IRF9Z24N}}
+\label{tbl:nmos}
+\end{table}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.4\textwidth]{./Figures/Low_Switch_Cir.png}
+\caption{Circuit diagram used for low side switching.}
+\label{fig:low_switch_cir}
+\end{figure}
+
+\section{Current sensor Digital Wheel}
+Since the the switching frequency is much larger than the \SI{1}{\kilo\hertz} filter requirement for the analogue current sensor the exact same circuit design will be used for the digital side as increasing the response time of the circuit will not meaningfully affect performance as you will have to wait for the analogue side. This also reduces design complexity and will allow for easier control of the car as the output from the current sensors will be the same for the same voltage. See Section:\ref{sec:current_sensor_design} for design specifics.
+
+\clearpage
+\section{Range sensor and PWM control}
+\subsection{Range sensor}
+The range sensor returns a PWM signal where the high time indicates how long it tool for the sonic signal to hit an object and return. Thus to calculate the range measured by the sensor the time the signal is high is measured using the pulseIn function which returns the time in microseconds. The range is  then calculated using the following formula:\\ $range = 340 \cdot \frac{HighTime}{2} \cdot 1E-6$\\ 
+The 340 is used for the speed of sound and dividing the high time by 2 gets the time to the object. This gives a distance in micrometer thus multiply by 1E-6 in order to get the range in meters.
+\subsection{PWM control}
+In order to calculate the duty cycle for the PWM control the range measured by the range sensor is limited to a maximum of 1 meter and then used to scale the maximum duty cycle. The speed command is then mapped from its range to the range of the duty cycle and added to the scaled duty cycle and the maximum duty cycle is then subtracted. This procedure is illustrated in the following pseudo-code:\\
+\begin{align*}
+& DutyCycleLimit = Range \cdot MaxDutyCycle\\
+& MappedRange = Range/MaxRange \cdot MaxDutyCycle\\
+& ControlDutyCycle = DutyCycleLimit+MappedRange-MaxDutyCycle\\
+\end{align*}
+
+This emulates the circuit used to control the analogue wheel and will result in similar behaviour. The full software system can be seen in Figure:\ref{fig:dig_ctrl_flow}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.4\textwidth]{./Figures/Dig_Ctrl_Flow.png}
+\caption{Flow diagram showing the software design.}
+\label{fig:dig_ctrl_flow}
+\end{figure}
+
 
 
 

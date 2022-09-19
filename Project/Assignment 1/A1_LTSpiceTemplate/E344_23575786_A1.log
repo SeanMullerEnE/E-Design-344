@@ -2,20 +2,20 @@ Circuit: * D:\Engineering\2022\Semester 2\E Design 344\Project\Assignment 1\A1_L
 
 Direct Newton iteration for .op point succeeded.
 
-Date: Sat Aug 27 11:35:09 2022
-Total elapsed time: 0.374 seconds.
+Date: Tue Sep 13 16:08:58 2022
+Total elapsed time: 0.477 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 33719
-traniter = 33689
-tranpoints = 14201
-accept = 9616
-rejected = 4585
+totiter = 29116
+traniter = 29107
+tranpoints = 14530
+accept = 9782
+rejected = 4748
 matrix size = 18
-fillins = 11
+fillins = 8
 solver = Normal
-Matrix Compiler1: 1.67 KB object code size  0.3/0.2/[0.1]
-Matrix Compiler2: off  [0.1]/0.2/0.2
+Matrix Compiler1: 1.52 KB object code size  0.4/0.2/[0.1]
+Matrix Compiler2: 1.52 KB object code size  0.2/0.3/[0.2]
 

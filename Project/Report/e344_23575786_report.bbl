@@ -47,6 +47,31 @@
   \url{https://www.st.com/resource/en/datasheet/ld1117.pdf}
 \BIBentrySTDinterwordspacing
 
+\bibitem{2N7002}
+\BIBentryALTinterwordspacing
+{Diodes Incorporated}, ``N-channel enhancement mode mosfet,'' 2013. [Online].
+  Available: \url{https://www.diodes.com/assets/Datasheets/ds11303.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{FQD13N06L}
+\BIBentryALTinterwordspacing
+{Fairchild}, ``Fqd13n06l / fqu13n06l n-channel qfet mosfet,'' 2016. [Online].
+  Available: \url{https://www.mouser.com/datasheet/2/149/FQD13N06L-244305.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{IRF530}
+\BIBentryALTinterwordspacing
+{Vishay}, ``Irf530 power mosfet,'' 2021. [Online]. Available:
+  \url{https://www.vishay.com/docs/91019/irf530.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{IRF9Z24N}
+\BIBentryALTinterwordspacing
+{International Rectifier}, ``Infineon-irf9z24n-datasheet-v01,'' 2004. [Online].
+  Available:
+  \url{https://www.infineon.com/dgdl/irf9z24npbf.pdf?fileId=5546d462533600a40153561218961ddb}
+\BIBentrySTDinterwordspacing
+
 \bibitem{NonIdeal_Opamps}
 \BIBentryALTinterwordspacing
 {R Nave}, ``Departures from ideal op-amp.'' [Online]. Available:
