@@ -28,29 +28,33 @@
 \contentsline {section}{\numberline {2.10}Range sensor and PWM control}{17}{section.2.10}%
 \contentsline {subsection}{\numberline {2.10.1}Range sensor}{17}{subsection.2.10.1}%
 \contentsline {subsection}{\numberline {2.10.2}PWM control}{17}{subsection.2.10.2}%
-\contentsline {chapter}{\numberline {3}Results}{18}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Current sensor}{18}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Simulation}{18}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Practical}{19}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Ultrasonic range sensor}{20}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Simulation}{20}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Practical}{21}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Digital to analogue converter}{22}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Simulation}{22}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Practical}{22}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Motor Control}{23}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Simulation}{23}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Practical}{24}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Voltage Regulation}{25}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Left side wheel control}{26}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Simulation results}{26}{subsection.3.6.1}%
-\contentsline {subsubsection}{Current Sensor}{26}{subsubsection*.37}%
-\contentsline {subsubsection}{PWM control}{26}{subsubsection*.39}%
-\contentsline {subsection}{\numberline {3.6.2}Practical results}{27}{subsection.3.6.2}%
-\contentsline {subsubsection}{Current Sensor}{27}{subsubsection*.41}%
-\contentsline {subsubsection}{PWM control}{27}{subsubsection*.42}%
-\contentsline {section}{\numberline {3.7}Photo's of Circuits}{28}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Circuit}{28}{subsection.3.7.1}%
-\contentsline {chapter}{Bibliography}{29}{chapter*.45}%
-\contentsline {chapter}{\numberline {A}Social contract}{31}{appendix.A}%
-\contentsline {chapter}{\numberline {B}GitHub Activity Heatmap}{32}{appendix.B}%
+\contentsline {section}{\numberline {2.11}Battery Charger}{18}{section.2.11}%
+\contentsline {section}{\numberline {2.12}Voltage conditioning}{19}{section.2.12}%
+\contentsline {section}{\numberline {2.13}Under-voltage protection}{20}{section.2.13}%
+\contentsline {chapter}{\numberline {3}Results}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Current sensor}{21}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Simulation}{21}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Practical}{22}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Ultrasonic range sensor}{23}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Simulation}{23}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Practical}{24}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Digital to analogue converter}{25}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Simulation}{25}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Practical}{25}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Motor Control}{26}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Simulation}{26}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Practical}{27}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Voltage Regulation}{28}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Left side wheel control}{29}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Simulation results}{29}{subsection.3.6.1}%
+\contentsline {subsubsection}{Current Sensor}{29}{subsubsection*.40}%
+\contentsline {subsubsection}{PWM control}{29}{subsubsection*.42}%
+\contentsline {subsection}{\numberline {3.6.2}Practical results}{30}{subsection.3.6.2}%
+\contentsline {section}{\numberline {3.7}Battery Charging circuit}{31}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Voltage Conditioning}{32}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Under voltage protection}{33}{section.3.9}%
+\contentsline {section}{\numberline {3.10}Photo's of Circuits}{34}{section.3.10}%
+\contentsline {subsection}{\numberline {3.10.1}Circuit}{34}{subsection.3.10.1}%
+\contentsline {chapter}{Bibliography}{35}{chapter*.50}%
+\contentsline {chapter}{\numberline {A}Social contract}{37}{appendix.A}%
+\contentsline {chapter}{\numberline {B}GitHub Activity Heatmap}{38}{appendix.B}%

@@ -225,6 +225,74 @@ This emulates the circuit used to control the analogue wheel and will result in 
 \label{fig:dig_ctrl_flow}
 \end{figure}
 
+\clearpage
+\section{Battery Charger}
+
+The battery charging circuit is shown in Figure:\ref{fig:bat_charg}. The only design for this section is selecting the mosfets M1 and M2 and designing the resistors R1-R5. Since M2 is being driven by the ESP it requires a low turn on voltage and thus the 2N7002 nmos will be used. M1 is used in a high side configuration and thus must be a pmos so the IRF9Z24N is used.\\
+
+R3 and R5 are just used as pull up and pull down resistor respectively so any resistor value that is sufficiently large will work in order to limit current draw, \SI{220}{\kilo\ohm} resistors were chosen for this.\\
+
+The voltage between the adjust pin and output pin on the voltage regulator is \SI{1.25}{\volt} \cite{LM317}. The following equations were used to calculate the required resistor values.
+\begin{align*}
+V_{out}-V_{adj}&=1.25\\
+V_{adj}&=\frac{R_4}{R_2} \cdot \left(1.25-R_1 I_{out} \right)\\
+\frac{R_4}{R_2} &= \frac{V_{out(max)}-V_{adj}}{V_{adj}}\\
+V_1 &=V_{out}-I_{out}R_1\\
+V_1 &=V_{bat}+V_{M1}+V_{D1}\\
+R_1 &=\frac{V_{out}(@400mA)- V_1(@400mA)}{400mA}
+\end{align*} 
+
+These calculations result in R1 of \SI{0.45}{\ohm} and a R4:R2 ratio of 5:1.\\
+R2 was chosen to be \SI{220}{\ohm} as this matches the recommended value in the datasheet \cite{LM317}.
+ 
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.4\textwidth]{./Figures/Bat_Charg.png}
+\caption{Battery charging circuit.}
+\label{fig:bat_charg}
+\end{figure}
+
+\clearpage
+\section{Voltage conditioning}
+
+It was decided that the voltage regulator would convert a voltage between 5 and 7.6V to 0 to 3.3V. The upper limit of 7.6 was chosen inorder to protect the ESP that will be reading the voltage and thus no voltage divider circuit will be needed. Thus a simple difference amplifier will be used to subtract the 5V from the battery voltage and then correctly scale the signal into the correct range. The required gain was calculated as follows:
+\begin{align*}
+G = \frac{V_{out(max)}}{V_{bat(max)} - V_{offset}}
+\end{align*}
+
+This results in a gain of 1.27, a base resistance of \SI{120}{\kilo\ohm} was chosen. See Figure: \ref{fig:volt_cond} for the circuit diagram. R5 = R7 = \SI{120}{\kilo\ohm}  and R6 = R8 = 1.27 \SI{120}{\kilo\ohm}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.4\textwidth]{./Figures/Volt_Cond.png}
+\caption{Voltage conditioning circuit.}
+\label{fig:volt_cond}
+\end{figure}
+
+
+\clearpage
+\section{Under-voltage protection}
+
+The under voltage protection is implemented using a Schmitt Trigger circuit see Figure: \ref{fig:schmitt_trig} for the circuit diagram. Note R9 represents the motor load. The input to the Schmitt trigger will be the output from the voltage  conditioning circuit as this results in a larger range and means the circuit is less sensitive to component tolerances. The following equations were used to calculate the component values:
+\begin{align*}
+V_{out(high)} & = 5\\
+V_{out(low)} & = 0\\
+V_{in(high)} & = 1.5231\\
+V_{in(low)} & = 1.2693\\
+V_{offset} &=\frac{V_{in(low)} \cdot V_{out(high)}}{V_{out(high)} + V_{in(low)} - V_{in(high)}}\\
+V_{offset} &=5 \cdot \frac{R_4}{R_3+R_4}\\
+R_2 &= \frac{-V_{offset}}{V_{in(low)}-V_{offset}} \cdot R_1\\
+\end{align*}
+
+These calculations result in the following resistor values: R1 = \SI{3.3}{\kilo\ohm}, R2 = \SI{65}{\kilo\ohm}, R3 = \SI{120}{\kilo\ohm}, R4 = \SI{43.8}{\kilo\ohm}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.4\textwidth]{./Figures/Schmitt_Trig.png}
+\caption{Under voltage protection circuit.}
+\label{fig:schmitt_trig}
+\end{figure}
+
 
 
 

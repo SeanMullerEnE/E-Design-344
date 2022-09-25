@@ -301,10 +301,63 @@ Figure: \ref{fig:dac_prac} shows the DAC response to different inputs and that t
 \caption{Motor voltage and Motor control signal}
 \label{fig:PWM_ctrl_sim}
 \end{figure}
+
 \clearpage
 \subsection{Practical results}
-\subsubsection{Current Sensor}
-\subsubsection{PWM control}
+\begin{figure}[H]
+\centering
+\begin{subfigure}[]{0.4\textwidth}
+\includegraphics[width=\linewidth]{./Figures/CurSens_Left_sf.jpeg}
+\caption{Slow speed command and far object.}
+\label{subfig:mtrctrl_left_prac_sf}	
+\end{subfigure}
+\hfill
+\begin{subfigure}[]{0.4\textwidth}
+\includegraphics[width=\linewidth]{./Figures/CurSens_Left_sc.jpeg}
+\caption{Slow speed command and close object.} 			
+\label{subfig:mtrctrl_left_prac_sc}	
+\end{subfigure}
+\begin{subfigure}[]{0.4\textwidth}
+\includegraphics[width=\linewidth]{./Figures/CurSens_Left_fc.jpeg}
+\caption{Fast speed command and close object.}
+\label{subfig:mtrctrl_left_prac_fc}	
+\end{subfigure}
+\hfill
+\begin{subfigure}[]{0.4\textwidth}
+\includegraphics[width=\linewidth]{./Figures/CurSens_Left_ff.jpeg}
+\caption{Fast speed command and far object.} 			
+\label{subfig:mtrctrl_left_prac_ff}	
+\end{subfigure}
+\caption{Current sensor voltage and PWM control signal.}
+\label{fig:mtrctrl_left_prac}
+\end{figure}
+
+\clearpage
+\section{Battery Charging circuit}
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.5\textwidth]{./Figures/Bat_Charg_Sim.png}
+\caption{Battery voltage and current vs supply and enable voltage.}
+\label{fig:bat_charg_sim}
+\end{figure}
+
+\clearpage
+\section{Voltage Conditioning}
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.5\textwidth]{./Figures/Volt_Cond_Sim.png}
+\caption{Battery voltage vs Signal conditioning output voltage.}
+\label{fig:volt_cond_sim}
+\end{figure}
+
+\clearpage
+\section{Under voltage protection}
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.5\textwidth]{./Figures/Und_volt_Sim.png}
+\caption{Motor voltage vs battery voltage}
+\label{fig:und_volt_sim}
+\end{figure}
 
 \clearpage
 \section{Photo's of Circuits}

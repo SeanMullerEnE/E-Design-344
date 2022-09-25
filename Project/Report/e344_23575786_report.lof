@@ -15,21 +15,28 @@
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Circuit diagram used for the voltage regulator \cite {LD1117}.\relax }}{14}{figure.caption.22}%
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Circuit diagram used for low side switching.\relax }}{15}{figure.caption.24}%
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Flow diagram showing the software design.\relax }}{17}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Battery charging circuit.\relax }}{18}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Voltage conditioning circuit.\relax }}{19}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Under voltage protection circuit.\relax }}{20}{figure.caption.28}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Current sensing circuit simulation results\relax }}{18}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Circuit response to different input conditions\relax }}{19}{figure.caption.27}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Circuit response to a full range step from 10\% to 0.5\% duty cycle\relax }}{20}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Current draw vs circuit output\relax }}{20}{figure.caption.29}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Ultrasonic sensor filter circuit responses.\relax }}{21}{figure.caption.30}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Simulation results of the DAC\relax }}{22}{figure.caption.31}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces DAC output for different inputs.\relax }}{22}{figure.caption.32}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Circuits used for motor control.\relax }}{23}{figure.caption.33}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Simulated circuit responses.\relax }}{23}{figure.caption.34}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Motor voltage for different input conditions.\relax }}{24}{figure.caption.35}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Voltage regulator output\relax }}{25}{figure.caption.36}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Current sensor output and current sensor resistor voltage\relax }}{26}{figure.caption.38}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Motor voltage and Motor control signal\relax }}{26}{figure.caption.40}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Labelled circuit of the current system\relax }}{28}{figure.caption.43}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Labelled circuit of current sensor and PWM control circuit.\relax }}{28}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Current sensing circuit simulation results\relax }}{21}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Circuit response to different input conditions\relax }}{22}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Circuit response to a full range step from 10\% to 0.5\% duty cycle\relax }}{23}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Current draw vs circuit output\relax }}{23}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Ultrasonic sensor filter circuit responses.\relax }}{24}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Simulation results of the DAC\relax }}{25}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces DAC output for different inputs.\relax }}{25}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Circuits used for motor control.\relax }}{26}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Simulated circuit responses.\relax }}{26}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Motor voltage for different input conditions.\relax }}{27}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Voltage regulator output\relax }}{28}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Current sensor output and current sensor resistor voltage\relax }}{29}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Motor voltage and Motor control signal\relax }}{29}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Current sensor voltage and PWM control signal.\relax }}{30}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Battery voltage and current vs supply and enable voltage.\relax }}{31}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Battery voltage vs Signal conditioning output voltage.\relax }}{32}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Motor voltage vs battery voltage\relax }}{33}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Labelled circuit of the current system\relax }}{34}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Labelled circuit of current sensor and PWM control circuit.\relax }}{34}{figure.caption.49}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
